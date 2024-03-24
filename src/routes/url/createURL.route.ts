@@ -8,7 +8,7 @@ const schema = zod.object({
   url: zod.string().url(),
 })
 
-export const createURL = (app: FastifyInstance) => {
+export const createURL = async (app: FastifyInstance) => {
   return app.post('/urls', async (request, reply) => {
     const { code, url } = schema.parse(request.body)
 
