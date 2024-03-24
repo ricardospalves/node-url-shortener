@@ -1,0 +1,7 @@
+POST http://localhost:3333/urls
+Content-Type: application/json
+
+{
+  "code": "google",
+  "url": "https://google.com"
+}
