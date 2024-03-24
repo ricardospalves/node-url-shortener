@@ -2,7 +2,7 @@ import { sql } from './lib/postgres'
 
 const setup = async () => {
   await sql`
-    CREATE TABLE IF NOT EXISTS url_shortner (
+    CREATE TABLE IF NOT EXISTS short_urls (
       id SERIAL PRIMARY KEY,
       code TEXT UNIQUE,
       original_url TEXT,
