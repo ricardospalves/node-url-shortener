@@ -1,6 +1,6 @@
 # 🐢🚀 Node: URL shortener
 
-URL shortner in Node.js.
+URL shortener in Node.js.
 
 ## 📝 License
 

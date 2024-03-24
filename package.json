@@ -1,7 +1,7 @@
 {
   "name": "url-shortener",
   "version": "1.0.0",
-  "description": "URL shortner in Node.js.",
+  "description": "URL shortener in Node.js.",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch ./src/server.ts",
