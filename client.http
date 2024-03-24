@@ -5,3 +5,7 @@ Content-Type: application/json
   "code": "google",
   "url": "https://google.com"
 }
+
+###
+
+GET http://localhost:3333/urls
