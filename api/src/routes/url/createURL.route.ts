@@ -9,7 +9,7 @@ const schema = zod.object({
 })
 
 export const createURL = async (app: FastifyInstance) => {
-  return app.post('/urls', async (request, reply) => {
+  return app.post('/short-url', async (request, reply) => {
     const { code, url } = schema.parse(request.body)
 
     try {
