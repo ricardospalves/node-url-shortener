@@ -1,3 +1,12 @@
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RootLayout } from './layouts/RootLayout'
+
+const router = createBrowserRouter([
+  {
+    element: <RootLayout />,
+  },
+])
+
 export const App = () => {
-  return <h1 className="font-bold">ShortURL</h1>
+  return <RouterProvider router={router} />
 }
