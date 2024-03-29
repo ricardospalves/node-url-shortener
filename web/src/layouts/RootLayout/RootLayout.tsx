@@ -5,7 +5,7 @@ export const RootLayout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="grow p-4">
+      <main className="flex flex-col grow p-4">
         <Outlet />
       </main>
     </div>
