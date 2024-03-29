@@ -15,6 +15,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           readOnly && 'bg-gray-200',
           className,
         ])}
+        readOnly={readOnly}
         ref={ref}
         {...restProps}
       />
