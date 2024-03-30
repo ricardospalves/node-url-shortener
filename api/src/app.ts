@@ -1,4 +1,5 @@
 import fastify, { RegisterOptions } from 'fastify'
+import { fastifyCors } from '@fastify/cors'
 import { createURL, listURLs } from './routes/url'
 import { redirectURL } from './routes/root'
 import { listMetrics } from './routes/metrics'
@@ -8,6 +9,11 @@ const FASTIFY_REGISTER_OPTIONS: RegisterOptions = {
 }
 
 const app = fastify()
+
+app.register(fastifyCors, {
+  origin: true,
+  credentials: true,
+})
 
 // API
 app.register(createURL, FASTIFY_REGISTER_OPTIONS)
