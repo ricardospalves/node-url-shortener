@@ -2,6 +2,14 @@
 
 URL shortener in Node.js.
 
+## Table of contents
+
+- [Technologies](#technologies)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+
 ## Technologies
 
 ### API (back-end)
@@ -93,6 +101,6 @@ In your browser access the URL: http://localhost:5173
 
 ✨ **Now you can register your URLs!** ✨
 
-## 📝 License
+## License
 
 This project is free and open source software released under the [MIT License](https://github.com/ricardospalves/node-url-shortener/blob/main/LICENSE).
