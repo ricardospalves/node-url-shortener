@@ -1,9 +1,15 @@
 import { Button } from '@/components/Button'
 import { Input } from '@/components/Input'
+import { useShortURLStore } from '@/hooks/useShortURL'
 import { useId, useRef, useState } from 'react'
-import { MdCopyAll as CopyIcon } from 'react-icons/md'
+import {
+  MdCopyAll as CopyIcon,
+  MdChevronLeft as ChevronLeftIcon,
+} from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 export const ShortURL = () => {
+  const { shortURL } = useShortURLStore((state) => state)
   const fieldId = useId()
   const fieldRef = useRef<HTMLInputElement>(null)
   const [copied, setCopied] = useState(false)
@@ -21,7 +27,7 @@ export const ShortURL = () => {
             className="sm:col-span-9 border-dashed"
             id={fieldId}
             ref={fieldRef}
-            value="lorem ipsum"
+            value={shortURL}
             readOnly
           />
 
@@ -48,6 +54,20 @@ export const ShortURL = () => {
             {copied ? 'Copied' : 'Copy'}
           </Button>
         </div>
+
+        <p className="mt-8">
+          <Link
+            to="/"
+            className="flex items-center justify-center py-2 border border-current rounded text-center"
+          >
+            <ChevronLeftIcon
+              className="block shrink-0 mr-1 size-6"
+              aria-hidden={true}
+            />
+
+            <span className="block shrink-0">Register anoter URL</span>
+          </Link>
+        </p>
       </div>
     </div>
   )
