@@ -1,5 +1,7 @@
 # 🗜️🔗 Node: URL shortener
 
+🚧 Work in progress 🚧
+
 URL shortener in Node.js.
 
 ## Table of contents
