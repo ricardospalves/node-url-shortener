@@ -1,18 +1,25 @@
 import { Button } from '@/components/Button'
 import { Input } from '@/components/Input'
 import { useShortURLStore } from '@/hooks/useShortURL'
-import { useId, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import {
   MdCopyAll as CopyIcon,
   MdChevronLeft as ChevronLeftIcon,
 } from 'react-icons/md'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const ShortURL = () => {
   const { shortURL } = useShortURLStore((state) => state)
   const fieldId = useId()
   const fieldRef = useRef<HTMLInputElement>(null)
   const [copied, setCopied] = useState(false)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!shortURL) {
+      navigate('/')
+    }
+  }, [])
 
   return (
     <div className="grow flex items-center justify-center">
