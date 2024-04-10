@@ -1,4 +1,3 @@
-import { useShortURLStore } from '@/hooks/useShortURL'
 import { useId, useRef, useState } from 'react'
 import { Input } from '../Input'
 import { Button } from '../Button'
@@ -9,7 +8,6 @@ export type CopyToClipboardProps = {
 }
 
 export const CopyToClipboard = ({ value }: CopyToClipboardProps) => {
-  const { shortURL } = useShortURLStore((state) => state)
   const fieldId = useId()
   const fieldRef = useRef<HTMLInputElement>(null)
   const [copied, setCopied] = useState(false)
@@ -26,7 +24,7 @@ export const CopyToClipboard = ({ value }: CopyToClipboardProps) => {
           className="sm:col-span-9 border-dashed"
           id={fieldId}
           ref={fieldRef}
-          value={shortURL}
+          value={value}
           readOnly
         />
 
